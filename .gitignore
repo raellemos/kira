@@ -36,6 +36,12 @@ downloads/*.zip
 .obsidian/workspace*
 .obsidian/cache
 
+# ---- Logseq / Cerebro ----
+cerebro/logseq/bak/
+cerebro/logseq/.recycle/
+cerebro/.DS_Store
+cerebro/**/*.DS_Store
+
 # ---- OpenClaw internals ----
 .openclaw/
 *.session
