@@ -1,0 +1,140 @@
+# ============================================
+# .gitignore — Kira Sync (Kimi Claw ↔ GitHub)
+# Proteção de dados sensíveis e lixo de sistema
+# ============================================
+
+# --- Secrets & Credentials ---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials.json
+secrets.json
+tokens.json
+config.json
+*token*
+*secret*
+*password*
+*api_key*
+*apikey*
+
+# --- SSH Keys ---
+.ssh/
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+id_ecdsa
+id_ecdsa.pub
+*.pub
+known_hosts
+
+# --- Node & Build ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# --- Logs ---
+logs/
+*.log
+*.log.*
+log/
+
+# --- OS & Editor ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.iml
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.env/
+.venv/
+
+# --- Temporary Files ---
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+
+# --- OpenClaw internals (não versionar) ---
+.openclaw/
+*.session
+*.pid
+
+# --- Obsidian vault internals (se houver) ---
+.obsidian/
+.trash/
+
+# --- Compiled / Generated ---
+dist/
+build/
+*.compiled
+*.min.js
+*.min.css
+
+# --- Database & Cache ---
+*.db
+*.sqlite
+*.sqlite3
+.cache/
+
+# --- Sensitive work files (nunca versionar) ---
+*senha*
+*password*
+*passwd*
+*credential*
+*auth*
+*login*
+*private*
+*secret*
+*confidencial*
+
+# --- Personal / Privacy ---
+*.pdf  # pode conter dados sensíveis
+*.docx
+*.xlsx
+*.pptx
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# --- But KEEP structure files ---
+!README.md
+!.gitkeep
+!contexto/.gitkeep
+!prompts/.gitkeep
+!projetos/.gitkeep
+!automacoes/.gitkeep
+!obsidian-sync/.gitkeep
