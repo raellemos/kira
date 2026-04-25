@@ -1,28 +1,37 @@
-# 🦊 Kira Sync
+# Kira — Sincronização Kimi Claw
 
-> Sincronização automática entre Kimi Claw (Mac local) ↔ GitHub ↔ Kimi Claw (VPS Hostinger)
+Repositório de sincronização entre instâncias Kimi Claw (Mac ↔ VPS).
 
 ## Estrutura
 
 | Pasta | Propósito |
-|---|---|
+|-------|-----------|
 | `contexto/` | Memória e contexto das conversas |
 | `prompts/` | Prompts reutilizáveis e templates |
 | `projetos/` | Arquivos de projetos específicos |
-| `automacoes/` | Scripts e fluxos automatizados |
-| `obsidian-sync/` | Arquivos prontos para consumo no Obsidian (Markdown puro) |
+| `automacoes/` | Scripts de sincronização |
+| `obsidian-sync/` | Arquivos para consumo no Obsidian |
 
-## Regras de Sync
+## Uso
 
-- Auto-commit a cada interação
-- Nunca commite secrets, API keys, senhas
-- Frontmatter YAML em arquivos do Obsidian
-- Links internos compatíveis: `[[arquivo]]`
+**Mac local:**
+```bash
+./automacoes/auto-pull.sh   # Ao iniciar
+./automacoes/auto-sync.sh   # Após cada interação
+```
 
-## Autenticação
+**VPS (produção):**
+```bash
+git pull origin main        # Pegar atualizações do Mac
+# ... trabalho ...
+git push origin main        # Enviar atualizações
+```
 
-- Mac: [SSH / PAT — preencher]
-- VPS: [SSH / PAT — preencher]
+## Segurança
+
+- Nenhum dado sensível é versionado (ver `.gitignore`)
+- Autenticação via PAT ou SSH
+- Commits automáticos com timestamp
 
 ---
-*Kira 🦊 — Assistente Pessoal do Israel*
+*Repo: https://github.com/raellemos/kira*
