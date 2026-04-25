@@ -6,8 +6,8 @@
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR"
 
-# Verificar se há mudanças
-if git diff --quiet && git diff --cached --quiet; then
+# Verificar se há mudanças (incluindo untracked)
+if git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
     echo "[auto-sync] Nada para sincronizar."
     exit 0
 fi
