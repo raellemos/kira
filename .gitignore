@@ -35,3 +35,8 @@ downloads/*.zip
 # ---- OBSIDIAN (se houver) ----
 .obsidian/workspace*
 .obsidian/cache
+
+# ---- OpenClaw internals ----
+.openclaw/
+*.session
+*.pid
